@@ -48,7 +48,7 @@ As Grace Hopper said:
 
   getMarkdownText() {
     const renderer = marked.Renderer();
-    const rawMarkup = marked(this.state.inputMarkup, {sanitize: true});
+    const rawMarkup = marked(this.state.inputMarkup, {sanitize: true, breaks: true});
     return {__html: marked(rawMarkup, {renderer: renderer})};
   }
 
